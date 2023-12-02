@@ -14,12 +14,15 @@ class TreeNode {
     
     removeChild(childToRemove) {
       const length = this.children.length;
+
+      // Reassigns this.children array with a new array containing all children except the one specified in the parameter
       this.children = this.children.filter(child => {
         return childToRemove instanceof TreeNode
         ? child !== childToRemove
         : child.data !== childToRemove;
       });
-  
+      
+      // If nothing was removed, for each element in this.children, call this function on them
       if (length === this.children.length) {
         this.children.forEach(child => child.removeChild(childToRemove));
       }
@@ -35,7 +38,7 @@ class TreeNode {
     }
     
     depthFirstTraversal() {
-        // Traverses all layers for each TreeNode consecutively
+        // Traverses all layers in each TreeNode consecutively
       console.log(this.data);
       this.children.forEach(child => child.depthFirstTraversal());
     }

@@ -86,3 +86,5 @@ checkout.setMaxSize(5);
 checkout.enqueue(0);
 checkout.dequeue();
 checkout.peek();
+
+module.exports = Queue;

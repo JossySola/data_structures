@@ -1,6 +1,6 @@
 /*
     A stack is a linear collection of nodes that adds data to one
-    end of the data structure. However, unline a queue, a stack
+    end of the data structure. However, unlike a queue, a stack
     removes data from the same end of the data structure.
 
     Stacks are often thought of as a "First In, Last Out" (FILO)
